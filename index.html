@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  
   <head>
     <meta charset="UTF-8">
     <title>Mh webapp by acaever</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <link rel="apple-touch-icon" href="touch-icon-iphone.png"> <!--사파리에 아이콘만들기-->
   </head>
-  <body>
-   
-    <form action="demo_form.asp" method="get">
-      <input type="text" name="searchkey"><br>
-      <input type="submit" value="Submit">
-    </form> 
-    
-    
-    
+
+  
+ <body>
+
+    <input type="text" id="txt"> <!--검색어 입력박스-->
+
+    <input type="button" value="twitter" id="btn" onclick="myFunction()"> <!--트위터검색-->
+    <input type="button" value="instargram" id="btn" onclick="myFunction2()"><!--인스타검색-->
+
+
+
+   <script>
+     function myFunction() { //트위터 검색
+
+	        var goo = "https://www.google.co.kr/?gfe_rd=cr&ei=E4cZU9inHIqakgXy-oHoDA#newwindow=1&q="; //구글검색
+          var txtva = document.getElementById("txt").value; // 검색어
+          var fl = " site://twitter.com/Stellar_GY" //필터링용 검색어
+
+	        var allva = goo + txtva + fl;
+
+	        window.open(allva);
+      }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+     function myFunction2() { //인스타그램 검색
+
+	        var goo = "https://www.google.co.kr/?gfe_rd=cr&ei=E4cZU9inHIqakgXy-oHoDA#newwindow=1&q="; //구글검색
+          var txtva = document.getElementById("txt").value; // 검색어
+          var fl = " site://www.instagram.com gy_stellar" //필터링용 검색어
+
+	        var allva = goo + txtva + fl;
+
+	        window.open(allva);
+      }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+  </script>
+
   </body>
 </html>
